@@ -28,5 +28,5 @@ bin/
 ### Mac OS ###
 .DS_Store
 .idea/
-JavaLab1.iml/
+JavaLab1.iml
 out
