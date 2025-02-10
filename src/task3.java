@@ -15,6 +15,6 @@ public class task3 {
         }
 
         int sum = max + min;
-        System.out.println("Сумма наибольшего и наименьшего элемента: " + sum);
+        System.out.println("Сумма наибольшего и наименьшего элементов: " + sum);
     }
 }
