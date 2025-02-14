@@ -1,7 +1,17 @@
+import java.util.Random;
+
 public class task3 {
     public static void main(String[] args) {
 
-        int[] array = new int[]{2, 5, -1, 10, -3, 90, 23, 10, 11, 43};
+        int[] array = new int[10];
+        Random rand = new Random();
+
+        System.out.print("Массив: ");
+        for (int i = 0; i < array.length; i++) {
+            array[i] = rand.nextInt(10);
+            System.out.print(array[i] + " ");
+        }
+
         int max = array[0];
         int min = array[0];
 
@@ -15,6 +25,6 @@ public class task3 {
         }
 
         int sum = max + min;
-        System.out.println("Сумма наибольшего и наименьшего элементов: " + sum);
+        System.out.print("\nСумма наибольшего " + max + " и наименьшего " + min + " элементов: " + sum);
     }
 }
