@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class task2 {
+public class Lab1Task2 {
     public static void main(String[] args) {
         Random rand = new Random();
         int x1 = rand.nextInt(5);

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class practic2 {
+public class Practic2 {
 
     static String[][] riddles = new String[][] {
             {"Висит груша, нельзя скушать", "лампочка"},
