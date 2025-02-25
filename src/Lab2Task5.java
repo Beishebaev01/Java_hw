@@ -5,11 +5,14 @@ public class Lab2Task5 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите строку: ");
-        String input = scanner.nextLine();
+        String inp = scanner.nextLine();
 
-        int middleIndex = input.length() / 2;
+        int middleIndex = inp.length() / 2;
 
-        String result = input.substring(middleIndex);
+        StringBuffer result = new StringBuffer();
+        result.append(inp);
+        result.delete(0, middleIndex);
+        result.toString();
 
         System.out.println("Результат: " + result);
     }
