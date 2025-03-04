@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class TaskOfArray {
+public class    TaskOfArray {
     public static void main(String[] args) {
         Random rand = new Random();
 
@@ -39,7 +39,8 @@ public class TaskOfArray {
             }
 
             else {
-                System.out.println("Молодец! Угадал!");
+                int res = counters[0] + (3- counters[1]);
+                System.out.println("Молодец! Угадал! Общее количество попыток: " + res);
                 break;
             }
         }
