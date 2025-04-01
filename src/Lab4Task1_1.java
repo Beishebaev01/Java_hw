@@ -19,7 +19,7 @@ public class Lab4Task1_1 {
         System.out.println("Метод addFirst(): " + numbers);
 
         numbers.addLast(101);
-        System.out.println("Ме addLast(): " + numbers);
+        System.out.println("Метод addLast(): " + numbers);
 
         System.out.println("Метод indexOf(): " + numbers.indexOf(2));
         System.out.println("Метод lastindexOf(): " + numbers.lastIndexOf(6));
