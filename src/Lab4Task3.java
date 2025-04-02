@@ -1,41 +1,36 @@
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Lab4Task3 {
     public static void main(String[] args) {
-        int[] numbers = new int[10];
-        Random rand = new Random();
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = rand.nextInt(10) + 1;
-        }
-        System.out.println("Исходный массив: " + Arrays.toString(numbers));
+        ArrayList<Integer> numbers = new Random().ints(10, 1, 10)
+                .boxed()
+                .collect(Collectors.toCollection(ArrayList::new));
+        System.out.println("Исходный список: " + numbers);
 
-        // 1. Копирование части из старого массива в новый
-        int[] subArray = new int[4];
-        System.arraycopy(numbers, 2, subArray, 0, 4);
-        System.out.println("Подмассив: " + Arrays.toString(subArray));
+        List<Integer> subList = new ArrayList<>(numbers.subList(3, 7));
+        System.out.println("Подсписок: " + subList);
 
-        // 2. Поиск уникальных чисел
-        Set<Integer> unique = new HashSet<>();
+        Map<Integer, Integer> numcount = new HashMap<>();
         for (int num : numbers) {
-            unique.add(num);
+            numcount.put(num, numcount.getOrDefault(num, 0) + 1);
         }
-        System.out.println("Уникальные числа: " + unique);
+        System.out.println(numcount);
 
-        // 3. Поиск max, min и суммы
-        int max = numbers[0];
-        int min = numbers[0];
+        List<Integer> uniq = new ArrayList<>();
+        for (Map.Entry<Integer, Integer> entry : numcount.entrySet()) {
+            if (entry.getValue() == 1) {
+                uniq.add(entry.getKey());
+            }
+        }
+        System.out.println("Уникальные числа: " + uniq);
+//        Set<Integer> uniqueNumbers = new HashSet<>(numbers);
+//        System.out.println("Уникальные числа: " + uniqueNumbers);
+
+        int max = Collections.max(numbers);
+        int min = Collections.min(numbers);
         int sum = 0;
-
         for (int num : numbers) {
-            if (num > max) {
-                max = num;
-            }
-            if (num < min) {
-                min = num;
-            }
             sum += num;
         }
         System.out.println("Максимум: " + max);
@@ -43,3 +38,4 @@ public class Lab4Task3 {
         System.out.println("Сумма: " + sum);
     }
 }
+

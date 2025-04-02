@@ -1,6 +1,7 @@
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Lab4Task2 {
     public static void main(String[] args) {
@@ -18,8 +19,11 @@ public class Lab4Task2 {
 
         Collection<Integer> keys = map.keySet();
         Collection<String> values = map.values();
+        Set<Map.Entry<Integer, String>> keyandvalues = map.entrySet();
+
 
         System.out.println("keys: " + keys);
         System.out.println("values: " + values);
+        System.out.println("keyandvalues: " + keyandvalues);
     }
 }
