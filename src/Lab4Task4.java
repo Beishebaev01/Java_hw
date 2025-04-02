@@ -10,11 +10,11 @@ public class Lab4Task4 {
 
         System.out.println("Анализ строки: " + text1);
 
-        Map<Character, Integer> charFrequency = new HashMap<>();
+        Map<Character, Integer> chars = new HashMap<>();
         for (char c : text1.toCharArray()) {
-            charFrequency.put(c, charFrequency.getOrDefault(c, 0) + 1);
+            chars.put(c, chars.getOrDefault(c, 0) + 1);
         }
-        System.out.println("Частота символов: " + charFrequency);
+        System.out.println("Частота символов: " + chars);
 
         String[] words = text1.split("\\W+");
         Map<String, Integer> word = new HashMap<>();
